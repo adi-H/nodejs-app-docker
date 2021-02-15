@@ -8,6 +8,11 @@ pipeline {
   }
 
   agent any
+ 
+  // ADDED TRIGGER MAYBE
+  triggers {
+    pollSCM('') // Enabling being build on Push
+  }
 
   stages {
     // Build ing the docker image. It will run the docker build and use the jenkins build number in docker tag.
